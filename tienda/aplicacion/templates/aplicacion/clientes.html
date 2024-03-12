@@ -1,0 +1,30 @@
+{% extends "aplicacion/index.html" %}
+
+
+{% block titulo %}
+<h1 class="mb-5">Clientes</h1>
+{% endblock titulo %}
+
+
+{% block contenido %}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Email</th>            
+        </tr>
+    </thead>
+    <tbody>
+    {% for c in clientes %}
+        <tr>
+            
+            <td>{{ c.nombre }}</td>
+            <td>{{ c.apellido }}</td>
+            <td>{{ c.email }}</td>
+            
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}
